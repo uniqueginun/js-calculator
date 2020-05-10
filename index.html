@@ -7,46 +7,63 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Calculator</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
     <script src="script.js" defer></script>
 </head>
 
 <body class="w-screen h-screen bg-indigo-900 flex items-center justify-center">
     <div class="bg-blue-100 w-1/4 h-auto">
         <div class="screen h-32 bg-gray-900 px-6 py-4 flex flex-col items-end justify-around">
-            <div class=" text-3xl text-gray-100">423342</div>
-            <div class=" text-lg text-gray-200">423</div>
+            <div data-prev-operand class="text-3xl text-gray-100"></div>
+            <div data-current-operand class="text-lg text-gray-200"></div>
         </div>
         <div class="keypad">
             <div class="flex flex-row w-full">
-                <button
+                <button data-clear-all
                     class="h-20 hover:shadow-lg hover:text-green-600 flex-1 shadow text-center font-bold text-xl">AC</button>
-                <button
-                    class="h-20 hover:shadow-lg hover:text-green-600 w-40 shadow text-center font-bold text-xl">DEL</button>
-                <button
-                    class="h-20 hover:shadow-lg hover:text-green-600 w-40 text-4xl shadow text-center font-bold">÷</button>
+                <button data-delete
+                    class="h-20 hover:shadow-lg hover:text-green-600 lg:w-40 w-1/4 shadow text-center font-bold text-xl"><i
+                        class="fas fa-backspace"></i></button>
+                <button data-operation
+                    class="h-20 hover:shadow-lg hover:text-green-600 lg:w-40 w-1/4 text-4xl shadow text-center font-bold">÷</button>
             </div>
             <div class="flex flex-row w-full">
-                <button class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-2xl">1</button>
-                <button class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-2xl">2</button>
-                <button class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-2xl">3</button>
-                <button class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-4xl">*</button>
+                <button data-number
+                    class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-2xl">1</button>
+                <button data-number
+                    class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-2xl">2</button>
+                <button data-number
+                    class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-2xl">3</button>
+                <button data-operation
+                    class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-4xl">*</button>
             </div>
             <div class="flex flex-row w-full">
-                <button class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-2xl">4</button>
-                <button class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-2xl">5</button>
-                <button class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-2xl">6</button>
-                <button class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-4xl">+</button>
+                <button data-number
+                    class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-2xl">4</button>
+                <button data-number
+                    class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-2xl">5</button>
+                <button data-number
+                    class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-2xl">6</button>
+                <button data-operation
+                    class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-4xl">+</button>
             </div>
             <div class="flex flex-row w-full">
-                <button class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-2xl">7</button>
-                <button class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-2xl">8</button>
-                <button class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-2xl">9</button>
-                <button class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-4xl">-</button>
+                <button data-number
+                    class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-2xl">7</button>
+                <button data-number
+                    class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-2xl">8</button>
+                <button data-number
+                    class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-2xl">9</button>
+                <button data-operation
+                    class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-4xl">-</button>
             </div>
             <div class="flex flex-row w-full">
-                <button class="h-20 shadow text-center font-bold w-40 hover:text-green-600 text-2xl">.</button>
-                <button class="h-20 shadow text-center font-bold w-40 hover:text-green-600 text-2xl">0</button>
-                <button class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-4xl">=</button>
+                <button data-number
+                    class="h-20 shadow text-center font-bold lg:w-40 w-1/4 hover:text-green-600 text-2xl">.</button>
+                <button data-number
+                    class="h-20 shadow text-center font-bold lg:w-40 w-1/4 hover:text-green-600 text-2xl">0</button>
+                <button data-equal
+                    class="h-20 shadow text-center font-bold flex-1 hover:text-green-600 text-4xl">=</button>
             </div>
         </div>
     </div>
